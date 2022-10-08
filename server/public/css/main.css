@@ -1,0 +1,21 @@
+#home{
+    display: flex;
+    background-color: antiquewhite;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conf-list{
+    border: solid;
+    border-radius: 15px;
+    width: 453px;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.conf-list:hover{
+    background-color: #258c41;
+}
