@@ -9,6 +9,6 @@ class HomeController
     public function indexAction()
     {
 
-        Render::getView('home');
+        Render::getView('home',[]);
     }
 }

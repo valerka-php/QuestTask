@@ -13,18 +13,19 @@ class Router
         self::$controller = 'HomeController';
     }
 
-    public static function run(string $url): void
+    public static function run(string $uri): void
     {
         self::setDefaultRoute();
 
-        $route = explode('/', $url);
+        $route = explode('?', $uri);
+        $path = explode('/',$route[0]);
 
-        if (!empty($route[1])) {
-            self::$controller = ucfirst($route[1]) . 'Controller';
+        if (!empty($path[1])) {
+            self::$controller = ucfirst($path[1]) . 'Controller';
 
         }
-        if (!empty($route[2])) {
-            self::$action = $route[2] . 'Action';
+        if (!empty($path[2])) {
+            self::$action = $path[2] . 'Action';
         }
 
         $class = 'App\controllers\\' . ucfirst(self::$controller);
