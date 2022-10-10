@@ -27,7 +27,7 @@ class DB
 
     private function setConfig(): void
     {
-        $config = require '../app/config/db.config.php';
+        $config = require __DIR__ . '../../app/config/db.config.php';
 
         $this->dsn = $config['dsn'];
         $this->user = $config['user'];

@@ -8,7 +8,7 @@
             <input type="hidden" name="lng" id="lng" >
             <div class="footer-form">
                 <a class="btn btn-outline-dark" href="/"> back </a>
-                <button class="btn btn-outline-success" type="submit" > save </button>
+                <button class="btn btn-outline-success" type="submit" > add </button>
             </div>
         </form>
     </div>

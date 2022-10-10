@@ -7,11 +7,6 @@ use App\models\Conference;
 
 class ApiController
 {
-    public function indexAction()
-    {
-        echo 'qwe';
-    }
-
     public function conferencesAction()
     {
         $db = new Conference();

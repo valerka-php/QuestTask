@@ -18,15 +18,15 @@ class ConferenceController
     {
         $conference = $this->model->getOne($_GET['id']);
         $params = [
+            'title' => 'show conference',
             'data' => $conference
         ];
-        Render::getView('conference', $params);
+        Render::getView('showConference', $params);
     }
 
     public function saveAction()
     {
         if ($_POST){
-            var_dump($_POST);
             $this->model->insertIntoTable($_POST,'conferences');
             header('location: /');
         }
@@ -34,12 +34,33 @@ class ConferenceController
 
     public function addAction()
     {
-        echo 'add conference';
-        Render::getView('addConference',[]);
+
+        Render::getView('addConference',['title' => 'add conference']);
     }
 
     public function deleteAction()
     {
         $this->model->deleteOne($_GET['id']);
+        var_dump($_GET['id']);
+        header('location: /');
+    }
+
+    public function updateAction()
+    {
+        $conference = $this->model->getOne($_GET['id']);
+        $params = [
+            'title' => 'update conference',
+            'data' => $conference
+        ];
+
+        Render::getView('updateConference',$params);
+    }
+
+    public function saveUpdatedAction()
+    {
+        if ($_POST){
+            $this->model->updateConference($_POST);
+            header('location: /');
+        }
     }
 }

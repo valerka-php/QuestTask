@@ -12,8 +12,7 @@
     margin: 15px;
     padding: 10px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
 }
 
 .conf-list:hover{
@@ -63,4 +62,66 @@ html, body {
 .block{
     display: flex;
     align-items: center;
+}
+
+.nav{
+    margin-top: 25px;
+    margin-left: auto;
+}
+
+.select{
+    display: flex;
+}
+
+.date{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.open-conference{
+    margin-right: 30px;
+}
+
+.title{
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.conference{
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.element-p{
+    border: solid burlywood;
+    width: 826px;
+    font-size: 36px;
+    border-radius: 27px;
+    padding: 14px;
+    overflow-wrap: break-word;
+    margin-bottom: 15px;
+}
+
+.area{
+    max-height: 250px;
+}
+
+.footer-conference{
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 55px;
+}
+
+div.footer-conference a {
+    margin-bottom: 55px;
+}
+
+.address{
+    padding: 15px
 }

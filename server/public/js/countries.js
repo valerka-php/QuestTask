@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <option value="${country.name}">${country.name}</option>`;
         })
 
-        selectDrop.innerHTML = output;
+        selectDrop.innerHTML += output;
     }).catch(err => {
         console.log(err);
     })

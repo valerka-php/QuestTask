@@ -8,8 +8,11 @@ export function getConferences() {
                 <div class="conf-list">
                     <div class="title" id="${data[key].id}">${data[key].title}</div>
                     <div class="date"> ${data[key].date} </div>
-                    <a href="/conference/show?id=${data[key].id}"> open </a>
-                    <button id="delete-${data[key].id}" class="btn btn-outline-danger"> X </button>
+                    <div class="nav">
+                        <a class="open-conference btn btn-outline-primary" href="/conference/show?id=${data[key].id}"> open </a>
+                        <a class="open-conference btn btn-outline-warning" href="/conference/update?id=${data[key].id}"> update </a>
+                        <a class="btn btn-outline-danger" href="/conference/delete?id=${data[key].id}" onclick="test()" > delete </a>
+                    </div>
                 </div>`
             }
         });

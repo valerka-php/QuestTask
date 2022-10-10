@@ -8,7 +8,6 @@ class HomeController
 {
     public function indexAction()
     {
-
-        Render::getView('home',[]);
+        Render::getView('home',['title' => 'home page']);
     }
 }
