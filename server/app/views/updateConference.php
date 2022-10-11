@@ -25,8 +25,8 @@
                     </select>
                 </div>
                 <div class="input-group mb-3 address">
-                    <input class="form-control" name="lat" id="lat" value="<?= $item['lat'] ?>">
-                    <input class="form-control" name="lng" id="lng" value="<?= $item['lng'] ?>">
+                    <input class="form-control" name="lat" id="lat" placeholder="latitude" value="<?= $item['lat'] ?>">
+                    <input class="form-control" name="lng" id="lng" placeholder="longitude" value="<?= $item['lng'] ?>">
                 </div>
                 <div class="footer-form">
                     <a class="btn btn-outline-dark" href="/"> back </a>

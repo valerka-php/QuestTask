@@ -5,8 +5,8 @@
             <input class="form-control" name="date" type="datetime-local" placeholder="select your date">
             <select class="form-select form-select-lg mb-3" id="countries" name="country" >Choose your Country:</select>
             <div class="address">
-                <input name="lat" id="lat" >
-                <input name="lng" id="lng" >
+                <input name="lat" id="lat" placeholder="latitude" >
+                <input name="lng" id="lng"  placeholder="longitude">
             </div>
             <div class="footer-form">
                 <a class="btn btn-outline-dark" href="/"> back </a>

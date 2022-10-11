@@ -27,14 +27,14 @@ class ConferenceController
     public function saveAction()
     {
         if ($_POST){
-            $this->model->insertIntoTable($_POST,'conferences');
+            $cleaned = array_map("htmlspecialchars", $_POST);
+            $this->model->insertIntoTable($cleaned,'conferences');
             header('location: /');
         }
     }
 
     public function addAction()
     {
-
         Render::getView('addConference',['title' => 'add conference']);
     }
 
@@ -59,7 +59,8 @@ class ConferenceController
     public function saveUpdatedAction()
     {
         if ($_POST){
-            $this->model->updateConference($_POST);
+            $cleaned = array_map("htmlspecialchars", $_POST);
+            $this->model->updateConference($cleaned);
             header('location: /');
         }
     }
