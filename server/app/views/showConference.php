@@ -1,9 +1,12 @@
 <div class="conference">
     <div class="body-conference">
         <?php foreach ($data as $item): ?>
-            <textarea class="element-p area"> title => <?= $item['title'] ?> </textarea>
-            <div class="element-p"> date => <?= $item['date'] ?> </div>
-            <div class="element-p"> contry => <?= $item['country'] ?></div>
+            <label>Title</label>
+            <textarea class="element-p area" disabled> <?= $item['title'] ?> </textarea>
+            <label>Date</label>
+            <div class="element-p"> <?= $item['date'] ?> </div>
+            <label>Country</label>
+            <div class="element-p"> <?= $item['country'] ?></div>
         <?php endforeach; ?>
     </div>
     <div class="map">
@@ -41,7 +44,7 @@
 
 </script>
 <script>
-    function deleteConfirm(){
-        if(confirm("Do you want delete it ?")) document.location = '/conference/delete?id=<?= $item['id'] ?>';
+    function deleteConfirm() {
+        if (confirm("Do you want delete it ?")) document.location = '/conference/delete?id=<?= $item['id'] ?>';
     }
 </script>
